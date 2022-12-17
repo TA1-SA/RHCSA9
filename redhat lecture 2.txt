@@ -1,0 +1,81 @@
+===================================
+Redhat Hirarechy 
+===================================
+
+							/    --->root directory [this pc]
+
+
+        Home --->users file[c:\users]             boot --->boot file [c:\windows]          dev --->any connected device [flash memory ,hard disk]
+
+
+	root ---> root user files                
+
+
+    folder ---> directory 
+    ~   ---> tilde  [home directory]
+    -  -->hyphen 
+===========================================
+  basic commands
+===========================================
+   syntax : 
+   commnad [-option(s)]  [arg(s)]   
+
+   pwd   -->print working directory  [print the current directory]
+   ls    --> list files & directory  
+   touch --> create file(s)     eg: touch file1 file2
+   mkdir --> create Dir(s)      eg: mkdir dir1  dir2
+   rm    --> remove file(s) or dir(s)
+   rmdir --> remove empty directory
+   cp    --> copy & past for file(s) or dir(s)
+   mv    -->cut & past for file(s) or dir(s) 
+   cd    --> change directory [navigation]
+ 
+========================================
+   Navigation in linux 
+========================================
+  main command --->cd
+   
+  [vertically] you can go up and down only
+
+  two ways of navigation :
+
+  absolute : --->    /
+  relative : from your current position  .  .. 
+
+
+
+                               /
+ 
+    boot         root        home               dev 
+                             
+                            student
+
+                           dir1 *dir2 
+
+   scenario :--> moving from dir1 to dir2 
+  eg :  absolute  cd /home/student/dir2   
+  eg : relative   cd ../dir2 
+   
+  scenario : moving from dir2 to home 
+   eg : absolute  cd /home  
+   eg : relative  cd ../..
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+  
+
+
+
+
+ 
