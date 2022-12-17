@@ -1,0 +1,95 @@
+ 16  pwd
+   17  ls
+   18  ls -l
+   19  mkdir dir1
+   20  ls -l
+   21  rmdir dir1
+   22  rm file2
+   23  ls
+   24  touch file3
+   25  touch file3 file4
+   26  ls
+   27  mv file4 file10
+   28  ls
+   29  cls
+   30  history
+   31  cls
+   32  ls -l
+   33  mkdir dir1 dir2 dir3 dir4
+   34  ls -l
+   35  touch dir1/file1 dir2/file2 dir3/file3 dir4/file4
+   36  ls
+   37  ls -lR
+   38  ls
+   39  rmdir dir1
+   40  man rmdir
+   41  rm dir1
+   42  man rm
+   43  rm -r dir1
+   44  vi .bashrc
+   45  source .bashrc
+   46  cls
+   47  ls
+   48  rm -r dir2
+   49  ls
+   50  history
+   51  cls
+   52  mkdir ABAD/Traininig  ABAD/management ABAD/course
+   53  mkdir -p  ABAD/Traininig  ABAD/management ABAD/course
+   54  ls
+   55  ls -lR
+   56  mkdir ABAD/course/linux ABAD/course/windows
+   57  rm -r ABAD/
+   58  y
+   59  cls
+   60  ls
+   61  mkdir -p ABAD/{training,course,Management}
+   62  ls
+   63  ls ABAD/
+   64  mkdir -p ABAD/course/{linux,windows}
+   65  touch ABAD/course/linux/redhat{8,9}_{1,2}.txt
+   66  ls -lR
+   67  history
+   68  mkdir dir{1..10}
+   69  ls
+   70  history
+   71  ls -lR
+   72  mv ABAD/course/linux/redhat*  .
+   73  ls
+   74  mv redhat8* ABAD/course/linux/
+   75  ls ABAD/course/linux/
+   76  ls
+   77  mv ABAD/course/linux/redhat8* ~
+   78  ls
+   79  cp redhat* ABAD/Management/
+   80  ls ABAD/Management/
+   81  ld
+   82  ls
+   83  cls
+   84  touch tv_season{1,2}_episode{1..6}.ogg
+   85  ls
+   86  ls -l
+   87  touch mystry_chapter{1..8}.odf
+   88  ls
+   89  mkdir -p Documents/my_bestseller
+   90  mkdir -p Documents/my_bestseller/{vacation,plot_change,editor}
+   91  cls
+   92  mkdir -p Videos/season{1,2}
+   93  ls Videos/
+   94  ls
+   95  mv tv_season1* Videos/season1
+   96  mv tv_season2* Videos/season2
+   97  mkdir -p Documents/my_bestseller/{vacation,plot_change,editor,chapter}
+   98  ls Documents/my_bestseller/
+   99  cd Documents/my_bestseller/chapter/
+  100  mv ~/mystry_chapter*  .
+  101  ls
+  102  mv mystry_chapter{1,2}.odf ../editor/
+  103  ls ../editor/
+  104  mv mystry_chapter{7,8}.odf ../vacation/
+  105  ls ../vacation/
+  106  cd ~/Videos/season2
+  107  ls
+  108  mv tv_season2_episode1.ogg ~/Documents/my_bestseller/vacation/
+  109  ls ~/Documents/my_bestseller/vacation/
+  110  history
