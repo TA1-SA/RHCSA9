@@ -59,7 +59,7 @@ Users -->an entity, in a Linux operating system, that can manipulate files and p
   481  cls
   482  ls -l /home/
   483  cls
-  484  usermod -G ABADNET6 student6
+  484  usermod -G ABADNET6 student6  --add user student6 to be memeber of abadnet6 group
   485  id student6
   486  tail /etc/group
   487  clear
