@@ -1,0 +1,103 @@
+=========================================
+	User & Groups 
+=========================================
+Users -->an entity, in a Linux operating system, that can manipulate files and perform several other operations
+
+--every thing in linux needs user to run
+--Every user has  ID & primary group  
+		system user has ID less than 1000
+		Regular user has 1000 and above 
+--Users managed by files : /etc/passwd -->show the user id and home directory 
+			   /etc/shadow --> show user password setting 
+
+--Commands :
+-useradd username 
+-usermod 
+-userdel
+
+
+**Groups : an entity in linux used to combine users togather  
+
+--every user in linux must have primary group , if you dont assign primary group , the system will assgin  primary group with same username 
+
+--you can manage the groups from the file : /etc/group
+
+--we have two groups type : 
+  1-primary group --> every user must have and only have one primary 
+  2-supplementary group-->every user could have zero or more supplemetary group 
+
+--Commands :
+ -groupadd  
+
+
+
+456  useradd student2
+  457  useradd student3
+  458  tail /etc/shadow
+  459  chage -l student3
+  460  tail /etc/passwd
+  461  cat /etc/passwd
+  462  tail /etc/group
+  463  tail /etc/passwd
+  464  clear
+  465  useradd ali
+  466  tail /etc/group
+  467  groupadd ABADNET
+  468  tail /etc/group
+  469  groupadd ABADNET1
+  470  tail /etc/group
+  471  cls
+  472  useradd student5
+  473  tail /etc/group
+  474  groupadd -g 10000 abadnet4
+  475  tail /etc/group
+  476  groupadd ABADNET6
+  477  useradd student6
+  478  tail /etc/group
+  479  tail /etc/passwd
+  480  id student6
+  481  cls
+  482  ls -l /home/
+  483  cls
+  484  usermod -G ABADNET6 student6
+  485  id student6
+  486  tail /etc/group
+  487  clear
+  488  ls -l /home
+  489  ls -l /home/student6
+  490  ls
+  491  vi addUsers
+  492  vi users
+  493  ./addUsers
+  494  vi users
+  495  vi addUsers
+  496  \
+  497  cls
+  498  usermod -g ABADNET6 student6
+  499  id student6
+  500  ls -l /home/
+  501  history
+  502  cls
+  503  useradd -u 9000 user9000
+  504  tail -1 /etc/shadow
+  505  tail -1 /etc/passwd
+  506  tail  /etc/shadow
+  507*
+  508  useradd student10 -p
+  509  cls
+  510  tail /etc/shadow
+  511  useradd student11
+  512  passwd student11
+  513  tail /etc/shadow
+  514  useradd student12
+  515  passwd student12
+  516  passwd student13
+  517  useradd student13
+  518  passwd student13
+  519  cls
+  520  tail /etc/shadow
+  521  useradd student14
+  522  passwd student14
+  523  tail /etc/shadow
+  524  cls
+
