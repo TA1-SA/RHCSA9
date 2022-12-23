@@ -1,0 +1,26 @@
+Permissions in linux :
+1-Read     r    --->4
+2-write    w  ----->2
+3-execute  x --->1 
+
+-rw-r----- student  student 23 11 tuseday file1
+
+
+dr-xr-x--- student  student 23 11 tuseday dir1
+
+
+
+         Permission    
+    ------------------------------------------------------------------------------------------------------------------------------------     
+         W                                                                                    R                                      X
+         
+         
+ File|  modify the file content                                                               Read file content                 Execute script 
+                                                                                            (cat ,tail ,less, head ,more)
+ 
+ 
+ 
+ 
+ Dir|  modify the dir content (create dir ,delete dir ,create file ,delete)                 list directory content             Change to dir
+                                                                                                                                      
+                                                                                                  (Ls)                            (cd)
