@@ -4,7 +4,10 @@ Permissions in linux :
 3-execute  x --->1 
 
 -rw-r----- student  student 23 11 tuseday file1
-
+ first character for file or dir 
+ next three character for user owner
+ next three character for group owner
+ last three character for others
 
 dr-xr-x--- student  student 23 11 tuseday dir1
 
