@@ -1,0 +1,55 @@
+#######################################
+Installing Software [YUM][dnf]
+#######################################
+
+-to install software easily in linux you must have a repository(place software reside in) ,it could be on the internet or internally 
+-if you have a subscription then ,you could install software directly from the vendor repo 
+-if you havnt a subscription then , you must configure the repo manually 
+
+**the repo contains[redhat 8,9] :
+ 1-BaseOS --> basic software to run the kernal and its components 
+ 2-AppStream--> contains the application built in redhat 
+ 
+ ** the repo could be built using file in /etc/yum.repos.d/filename.repo
+ eg:
+ 
+ vi /etc/yum.repos.d/local.repo
+ 
+ [BaseOS anyID]
+ name=anyname
+ baseurl=https://     file://    sftp:// ftp://
+ gpgcheck=link to the gpg key 
+ 
+ [AppStream anyID]
+ name=anyname
+ baseurl=https://     file://    sftp:// ftp://
+ gpgcheck=link to the gpg key 
+ 
+ 
+ #######################################
+ Commands
+ #######################################
+ -to check the repo :
+ $ yum repolist all
+ 
+ -to install software 
+ $ yum install httpd 
+ 
+ -to remove software 
+ $yum remove httpd
+ 
+ -to see the history of using Yum
+ $ yum history
+ $yum history info 3
+ 
+ -to undo step in yum 
+ $ yum history undo 3 
+ 
+ ############################################
+ Notes: we deal only with software that based on rpm [redhat package manager]
+ ############################################
+ 
+ 
+ 
+ 
+ 
