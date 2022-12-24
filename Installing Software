@@ -25,6 +25,19 @@ Installing Software [YUM][dnf]
  baseurl=https://     file://    sftp:// ftp://
  gpgcheck=link to the gpg key 
  
+ LAB EG:
+ vi /etc/yum.repos.d/local.repo
+
+[BaseOS-1]
+name=BaseOSLocal
+baseurl=file:///mnt/BaseOS                                
+gpgcheck=no
+
+[AppStream-1]
+name=AppStreamLocal
+baseurl=file:///mnt/AppStream
+gpgcheck=no
+
  
  #######################################
  Commands
@@ -44,6 +57,14 @@ Installing Software [YUM][dnf]
  
  -to undo step in yum 
  $ yum history undo 3 
+ 
+ #########
+ LAB Edit
+ ########
+        $yum grouplist
+ 4.2--> $yum groupinfo "System Tools"
+ 4.3--> $yum groupinstall "System Tools"
+
  
  ############################################
  Notes: we deal only with software that based on rpm [redhat package manager]
