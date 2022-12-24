@@ -27,3 +27,60 @@ dr-xr-x--- student  student 23 11 tuseday dir1
  Dir|  modify the dir content (create dir ,delete dir ,create file ,delete)                 list directory content             Change to dir
                                                                                                                                       
                                                                                                   (Ls)                            (cd)
+
+
+change permission using chmod commands:
+1-symbolic
+u ---> chmod u+x file1
+g--->chmod g+w file1
+o--> chmod o=-                                        
+eg:
+A-adding write permission on the user group others
+
+$chmod oug+w file1
+
+B- adding execute permission to user and no permission to other
+$chmod u+x file1     chmod u=rw file1   chmod u-x file1 
+$chmod o=- file1  chmod gu+rw file1 
+
+
+2-numeric
+eg:
+$chmod 777 file1 
+
+A-     -rw-r----- student student file1    640
+--scenario adding write to group and read to others
+$chmod 664 file1
+
+-rw-rw-r-- student student file1    664
+
+--scenario remove read from others
+$chmod 660 file1
+
+
+###################################################
+changing ownership
+###################################################
+
+-rw-r----- student student file1    640
+change the owner of file1 as a user to be app1 and the group owner to be app1 
+
+$chown app1:app1 file1
+----------------------------------------------------------------
+change the owner of file1 as a user to be app1 
+
+$chown app1 file1
+----------------------------------------------------------------
+change  the group owner to be app1 
+
+$chown :app1 file1
+-----------------------------------------------------
+
+
+
+
+
+
+
+
+
