@@ -76,8 +76,35 @@ change  the group owner to be app1
 $chown :app1 file1
 -----------------------------------------------------
 
+####################################################################
+Commands  chmod+chown
+####################################################################
+
+ 214  chmod o=-  apache/
+  215  ls -l
+  216  chmod 770 apache/
+  217  ls -l
+  218  chmod o+w containers.txt
+  219  ls -l
+  220  chmod og=- Desktop/
+  221  ls -l
+  222  chmod g+w dir1
+  223  ls -l
+  224  chmod g+w file13 & chmod o=- file13
+  225  ls -l
+  226  chmod 660 file13
+  227  ls -l
+  228  chmod 777 Videos/
+  229  chmod go+w Videos/
+  230  ls -l
+  231  chmod o=- wwwlogs/
 
 
+
+
+chown student6 /home/student/wwwlogs/
+chown :ABADNET6 /home/student/wwwlogs/
+chown student6:ABADNET6 /home/student/wwwlogs/
 
 
 
