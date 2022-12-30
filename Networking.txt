@@ -1,0 +1,48 @@
+###########################
+Networking in Redhat [Exam Objective]
+###########################
+
+*All Servers must hold static ip
+ipv4 is the most wide used in networking 
+
+*network manager service is responsible about networking in redhat 
+
+*you can know your ip using :
+
+- ip a  or ip addr  or ip address
+- ifconfig
+- nmcli device show 
+
+
+* you can add ip configuration using :
+
+-  nmcli add connection con-name [anyname] ifname ens192 type ethernet autoconnect yes 
+   ipv4.address [Your static ip] ipv4.dns [your dns address] ipv4.gateway [your gateway address] 
+   ipv4.method manual 
+eg:
+-  nmcli add connection con-name static-ip ifname ens192 type ethernet autoconnect yes 
+  ipv4.address 192.168.200.193/24 ipv4.dns 192.168.100.1 ipv4.gateway 192.168.200.1 
+   ipv4.method manual 
+
+- nmcli connection up static-ip
+
+- nmcli connection down static-ip
+
+
+* you can edit your ip configuration 
+
+- nmcli modify static-ip ipv4.address [new ip] ipv4.dns [new dns]
+ 
+
+your static ip configuration as listed :
+
+Fahad--> ipv4.address 192.168.200.193/24  ipv4.dns 192.168.100.1 ipv4.gateway 192.168.200.1 
+
+Ali--> ipv4.address 192.168.200.196/24  ipv4.dns 192.168.100.1 ipv4.gateway 192.168.200.1 
+
+Majed--> ipv4.address 192.168.200.195/24  ipv4.dns 192.168.100.1 ipv4.gateway 192.168.200.1 
+
+nmcli connection add con-name [static-ip] ifname ens192 type ethernet autoconnect yes 
+  ipv4.address [192.168.200.193/24] ipv4.dns [192.168.100.1] ipv4.gateway [192.168.200.1]
+   ipv4.method manual 
+
