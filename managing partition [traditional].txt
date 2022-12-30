@@ -1,0 +1,34 @@
+###################################
+Managing Partition [Exam Objectives] 
+###################################
+Storages :
+
+1-LVM
+2-Swap 
+3-VDO 
+**4-Stratis 
+
+*how to know your storages:
+
+-lsblk       [most used]
+-fdisk -l 
+
+*storages in linux :
+
+sda sdb sdc sdd .....
+vda vdb vdc vdd .....
+
+*how to do partitioning :
+
+--application team prompt to have a fixed space to /log about 4G: 
+1-show disk spaces  ---> lsblk
+2-choose the disk --> fdisk /dev/sdb -->p -->n-->1-->press enter -->+4G--->p--->w 
+3-let the kernal read the partition table--->partprobe 
+4-choose the file system:
+	ext4 :volumes less than 2TB
+	xfs  :volume less than or greater than 2 TB
+ 
+   --->mkfs.ext4 /dev/sdb1 
+ 5-store info into /etc/fstab  ---> echo /dev/sdb1 /log ext4 defaults 0 0 >>/etc/fstab
+ 6- to check configuration ---> mount -a 
+ 7-check your partition --> df -h 
