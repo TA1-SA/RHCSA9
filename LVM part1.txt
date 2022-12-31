@@ -1,0 +1,46 @@
+###############################
+	     LVM
+###############################
+Logical Volume Management : a software management tool to manage the partition by combining more than one disk togather to become logical disk
+ 
+components : 
+
+1-physical Volume  (pvcreate) 
+2-Volume Group  (vgcreate)
+3-Logical Volume (lvcreate)
+
+
+
+
+------------------------------------------------------------------------
+
+Volume Group [Shazam] 100GB
+----------------------------------------
+
+-------------                           |    
+| /dev/sdd   |  50GB     
+-------------        		        |
+-------------
+| /dev/sde   |  50GB                    |     
+-------------
+                                        |
+----------------------------------------
+
+Logical Volume [storage] ---> 75GB 
+
+
+
+Commands Eg:
+  702  lsblk
+  703  pvcreate /dev/sdj /dev/sdl /dev/sdk
+  704  vgcreate shazam /dev/sdk /dev/sdl /dev/sdj
+  705  vgcreate abadnetSt /dev/sdk /dev/sdl /dev/sdj
+  706  vgdisplay abadnetSt
+  707  lvcreate -n storage -L 7G abadnetSt
+  708  lvdisplay storage
+  709  lvdisplay
+  710  mkdir /Apps
+  711  mkdir /App
+  712  mkfs.ext4 /dev/abadnetSt/storage
+  713  echo /dev/abadnetSt/storage /App ext4 defaults 0 0 >>/etc/fstab
+  714  mount -a
