@@ -1,0 +1,21 @@
+Firewall : software or hardware to filter incomming and outgoing traffic throught set of rules 
+
+
+*firewall in linux divided into zones [zonename ] [set of rules]
+**you can customize of the rule 
+ 
+
+Commands:
+ 540  firewall-cmd --list-all
+  541  firewall-cmd --remove-service=http
+  542  firewall-cmd --remove-port=80/tcp
+  543  firewall-cmd --list-all
+  545  firewall-cmd --list-all
+  546  firewall-cmd --add-service=http
+  547  history
+  548  systemctl stop firewalld.service
+  551  firewall-cmd --state
+  552  systemctl start firewalld.service
+  553  firewall-cmd --state
+
+
