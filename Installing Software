@@ -26,7 +26,8 @@ Installing Software [YUM][dnf]
  gpgcheck=link to the gpg key 
  
  LAB EG:
- vi /etc/yum.repos.d/local.repo
+mount /dev/sr0 /mnt
+vi /etc/yum.repos.d/local.repo
 
 [BaseOS-1]
 name=BaseOSLocal
