@@ -1,0 +1,28 @@
+####################################
+soft&hard link [shortcut]
+####################################
+
+-soft link as shortcut to link directory to another 
+-hard link used as a copy to another file 
+
+
+-if we delete the linked directory  ,the link will be invalid
+-if we delete the linked files, the hard link will reside 
+
+
+
+-hard link using ln command 
+-soft link  using ln -s  
+
+Commands in lecture :
+  296  ln -s  /home/student/Documents   Documents
+  297  ls -l
+  298  mkdir Documents/dir1
+  299  ls -l /home/student/Documents
+  300  vi /home/student/script1
+  301  ln /home/student/script1  script1
+  302  ls
+  303  vi script1
+  304  vi /home/student/script1
+  305  rm /home/student/script1
+  306  vi script1

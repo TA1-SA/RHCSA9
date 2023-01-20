@@ -1,21 +1,43 @@
-Firewall : software or hardware to filter incomming and outgoing traffic throught set of rules 
+#######################################
+FireWall 
+#######################################
+software or hardware to filter incomming and outgoing traffic 
+
+**firewall in linux :
+1-divided into zones 
+2-each zone has its own configuration 
+3-customize the configuration 
+
+-----------------------------
+firewall managed by firewalld service :
+Command :
+1-firewall-cmd 
+
+2- --iptables --- deprected 
 
 
-*firewall in linux divided into zones [zonename ] [set of rules]
-**you can customize of the rule 
- 
-
-Commands:
- 540  firewall-cmd --list-all
-  541  firewall-cmd --remove-service=http
-  542  firewall-cmd --remove-port=80/tcp
-  543  firewall-cmd --list-all
-  545  firewall-cmd --list-all
-  546  firewall-cmd --add-service=http
-  547  history
-  548  systemctl stop firewalld.service
-  551  firewall-cmd --state
-  552  systemctl start firewalld.service
-  553  firewall-cmd --state
 
 
+
+
+Lecture commands :
+  207  firewall-cmd --state
+  208  firewall-cmd --list-all
+  209  systemctl enable httpd
+  210  systemctl start httpd
+  211  firewall-cmd --add-service=http
+  212  firewall-cmd --remove-service=http
+  213  firewall-cmd --add-port=80/tcp
+  217  firewall-cmd --list-all
+  218  firewall-cmd --add-port=8080/tcp
+  220  firewall-cmd --remove-port=8080/tcp
+  222  firewall-cmd --list-all
+  223  firewall-cmd --remove-port=80/tcp
+  224  firewall-cmd --list-all
+  230  firewall-cmd --set-default-zone=drop
+  231  firewall-cmd --list-all
+  232  firewall-cmd --list-all-zones
+  235  firewall-cmd --set-default-zone=public
+  236  firewall-cmd --list-all
+  239  firewall-cmd --add-service=http
+  241  firewall-cmd --remove-service=http
