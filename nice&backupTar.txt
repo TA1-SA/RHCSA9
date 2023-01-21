@@ -1,0 +1,46 @@
+Nice priority 
+____________________
+
+all process schedualed in the cpu to run has a priority level 
+
+-20  ---->  +19 
+lower number means hight priority 
+
+the negative priority level is set only by privileged user 
+
+Commands:
+$ps -eo pid,ppid,ni,comm 
+
+$top
+
+==========================================================
+backup in linux using tar command
+
+archive :
+$tar cf etc.tar /etc 
+
+Compression :
+
+1-gzip    ---> tar cfz etc.tar.gz /etc  
+
+2-bzip2 ---->tar cfj etc.tar.bz2 /etc  
+
+3-xz----> tar cfJ etc.tar.xz /etc  
+
+=============================================================
+uncompress: 
+
+1-gzip    ---> tar xfz etc.tar.gz  
+
+2-bzip2 ---->tar xfj etc.tar.bz2
+
+3-xz----> tar xfJ etc.tar.xz 
+
+
+
+
+
+
+
+
+
